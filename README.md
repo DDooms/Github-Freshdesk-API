@@ -15,7 +15,9 @@ npm i axios jest
 ```bash
 node /src/run.js
 ```
-or just configure it from the IDE -> (note, when you type this command in terminal, run it with ctrl + enter
+(note, when you type this command in terminal, run it with ctrl + enter
+
+Or just configure it from the IDE
 
 
 6) You can run the unit tests using :
