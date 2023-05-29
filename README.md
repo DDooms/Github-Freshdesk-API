@@ -26,4 +26,4 @@ npx jest
 ```
 
 - Note that not using proper tokens will result in error, so they need to be valid 
-- The username and the subdomain are mine, so make sure to change them, in order to get your github user and freshdesk domain
+- The username and the subdomain in run.js are mine, so make sure to change them, in order to get your github user and freshdesk domain
