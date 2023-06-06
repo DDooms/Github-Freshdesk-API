@@ -14,9 +14,12 @@ async function createFreshdeskContact(subdomain, contactData) {
                 {
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Basic ${Buffer.from(freshdeskToken + ':X').toString('base64')}`,
                     },
-                }
+                    auth: {
+                        username: freshdeskToken,
+                        password: '',
+                    },
+                },
             );
 
             const updatedContact = response.data;
@@ -30,9 +33,12 @@ async function createFreshdeskContact(subdomain, contactData) {
                 {
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Basic ${Buffer.from(freshdeskToken + ':X').toString('base64')}`,
                     },
-                }
+                    auth: {
+                        username: freshdeskToken,
+                        password: '',
+                    },
+                },
             );
 
             const newContact = response.data;
