@@ -8,11 +8,19 @@ async function getExistingFreshdeskContact(subdomain, email) {
             `https://${subdomain}.freshdesk.com/api/v2/contacts`,
             {
                 headers: {
+                    // Content type is always specified, when you do a POST request
                     'Content-Type': 'application/json',
-                    Authorization: `Basic ${Buffer.from(freshdeskToken + ':X').toString('base64')}`,
+
+                    // There is a better and simpler way to do this
+                    /*Authorization: `Basic ${Buffer.from(freshdeskToken + ':X').toString('base64')}`,*/
+                    // Axios needs the auth to be 'encrypted' with both username and password
                 },
                 params: {
                     email: email,
+                },
+                auth: {
+                    username: freshdeskToken,
+                    password: '', // No password is required in my case
                 },
             }
         );
@@ -26,7 +34,6 @@ async function getExistingFreshdeskContact(subdomain, email) {
         }
     } catch (error) {
         console.error('Error retrieving existing Freshdesk contact:', error.message);
-        throw error;
     }
 }
 

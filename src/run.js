@@ -5,8 +5,8 @@ const createFreshdeskContact = require('./createFreshdeskContact');
 const username = 'DDooms';
 const subdomain = 'dooms';
 const contactData = {
-    name: 'TESTTTTTTTT NAME SS',
-    email: 'hello@gmail.com',
+    name: 'Test name',
+    email: 'testnew@gmail.com',
 };
 
 

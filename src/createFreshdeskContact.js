@@ -42,7 +42,6 @@ async function createFreshdeskContact(subdomain, contactData) {
         }
     } catch (error) {
         console.error('Error creating or updating Freshdesk contact:', error.message);
-        throw error;
     }
 }
 
